@@ -28,7 +28,8 @@ useEffect(() => {
   }, [TRAIN_LIST, TrainDate]);
 
   # api using axios
-  import axios from 'axios';
+//  
+import axios from 'axios';
 
 export const RequestMap = async (url) => {
   try {
@@ -38,3 +39,4 @@ export const RequestMap = async (url) => {
     throw error;
   }
 };
+//
