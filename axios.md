@@ -40,3 +40,41 @@ export const RequestMap = async (url) => {<br>
   }<br>
 };<br>
 //
+# Finally success code 
+//
+import axios from 'axios';
+import { useContext, useEffect } from 'react';
+import { Context } from '../context/Context';
+
+export const RequestMap = (url) => {
+    const { setIsLoading, setActiveIndicator, setErrorIndicator, setError, error, setData, setFullData, isLoading, setLoadingMessage, setErrorMessage } = useContext(Context);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                setIsLoading(true);
+                const response = await axios(url);
+                const json = response.data.train_list;
+                console.log(json);
+                setData(json);
+                setFullData(json);
+            } catch (error) {
+                setError(error.toString());
+            } finally {
+                if (error) {
+                    setErrorIndicator(true);
+                    setErrorMessage(error);
+                }
+                if (isLoading) {
+                    setActiveIndicator(true);
+                    setLoadingMessage('Loding Train Details ...');
+                }
+                setIsLoading(false);
+                setActiveIndicator(false);
+                setErrorIndicator(false);
+            }
+        }
+        fetchData();
+    }, [url]);
+}
+
+//
