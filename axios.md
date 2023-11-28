@@ -42,38 +42,38 @@ export const RequestMap = async (url) => {<br>
 //
 # Finally success code 
 
-import axios from 'axios';
-import { useContext, useEffect } from 'react';
-import { Context } from '../context/Context';
-
-export const RequestMap = (url) => {
-    const { setIsLoading, setActiveIndicator, setErrorIndicator, setError, error, setData, setFullData, isLoading, setLoadingMessage, setErrorMessage } = useContext(Context);
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                setIsLoading(true);
-                const response = await axios(url);
-                const json = response.data.train_list;
-                console.log(json);
-                setData(json);
-                setFullData(json);
-            } catch (error) {
-                setError(error.toString());
-            } finally {
-                if (error) {
-                    setErrorIndicator(true);
-                    setErrorMessage(error);
-                }
-                if (isLoading) {
-                    setActiveIndicator(true);
-                    setLoadingMessage('Loding Train Details ...');
-                }
-                setIsLoading(false);
-                setActiveIndicator(false);
-                setErrorIndicator(false);
-            }
-        }
-        fetchData();
-    }, [url]);
-}
+import axios from 'axios';<br>
+import { useContext, useEffect } from 'react';<br>
+import { Context } from '../context/Context';<br>
+<br>
+export const RequestMap = (url) => {<br>
+    const { setIsLoading, setActiveIndicator, setErrorIndicator, setError, error, setData, setFullData, isLoading, setLoadingMessage, setErrorMessage } = useContext(Context);<br>
+    useEffect(() => {<br>
+        async function fetchData() {<br>
+            try {<br>
+                setIsLoading(true);<br>
+                const response = await axios(url);<br>
+                const json = response.data.train_list;<br>
+                console.log(json);<br>
+                setData(json);<br>
+                setFullData(json);<br>
+            } catch (error) {<br>
+                setError(error.toString());<br>
+            } finally {<br>
+                if (error) {<br>
+                    setErrorIndicator(true);<br>
+                    setErrorMessage(error);<br>
+                }<br>
+                if (isLoading) {<br>
+                    setActiveIndicator(true);<br>
+                    setLoadingMessage('Loding Train Details ...');<br>
+                }<br>
+                setIsLoading(false);<br>
+                setActiveIndicator(false);<br>
+                setErrorIndicator(false);<br>
+            }<br>
+        }<br>
+        fetchData();<br>
+    }, [url]);<br>
+}<br>
 
