@@ -28,7 +28,7 @@ useEffect(() => {
     };
     fetchDataFromApi();
   }, [TRAIN_LIST, TrainDate]);
-//
+
   # api using axios
 ```js
 //  
@@ -42,7 +42,7 @@ export const RequestMap = async (url) => {<br>
     throw error;<br>
   }<br>
 };<br>
-//
+
 # Finally success code 
 ```js
 //
