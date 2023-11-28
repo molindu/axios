@@ -1,4 +1,4 @@
-# // component
+## // component
 ```js
 //
 useEffect(() => {
@@ -29,9 +29,8 @@ useEffect(() => {
     fetchDataFromApi();
   }, [TRAIN_LIST, TrainDate]);
 //
-```markdown
-# api using axios #########################################################################################
-```markdown
+
+## api using axios #########################################################################################
 //  
 import axios from 'axios';<br>
 
@@ -44,9 +43,8 @@ export const RequestMap = async (url) => {<br>
   }<br>
 };<br>
 //
-```markdown
-# Finally success code  ##############################################################################################
-```markdown
+## Finally success code  ##############################################################################################
+
 ```js
 //
 import axios from 'axios';
