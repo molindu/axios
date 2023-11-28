@@ -1,4 +1,6 @@
 # // component
+```js
+//
 useEffect(() => {
     const fetchDataFromApi = async () => {
       try {
@@ -26,8 +28,9 @@ useEffect(() => {
     };
     fetchDataFromApi();
   }, [TRAIN_LIST, TrainDate]);
-
+//
   # api using axios
+```js
 //  
 import axios from 'axios';<br>
 
