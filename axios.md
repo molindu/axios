@@ -1,6 +1,6 @@
 ## // component
 ```js
-//
+
 useEffect(() => {
     const fetchDataFromApi = async () => {
       try {
@@ -28,10 +28,10 @@ useEffect(() => {
     };
     fetchDataFromApi();
   }, [TRAIN_LIST, TrainDate]);
-//
+
 ```
- api using axios #########################################################################################
-//  
+# api using axios 
+```js
 import axios from 'axios';
 
 export const RequestMap = async (url) => {
@@ -42,11 +42,10 @@ export const RequestMap = async (url) => {
     throw error;
   }
 };
-//
-<!-- Finally success code  ####################-->
+```
+# Finally success code 
 
 ```js
-//
 import axios from 'axios';
 import { useContext, useEffect } from 'react';
 import { Context } from '../context/Context';
@@ -73,6 +72,6 @@ export const RequestMap = (url) => {
     }, [url]);
 
 }
-//
+```
 
 
