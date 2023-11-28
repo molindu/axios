@@ -32,16 +32,16 @@ useEffect(() => {
 
 ## api using axios #########################################################################################
 //  
-import axios from 'axios';<br>
+import axios from 'axios';
 
-export const RequestMap = async (url) => {<br>
-  try {<br>
-    const response = await axios.get(url);<br>
-    return JSON.stringify(response.data.train_list);<br>
-  } catch (error) {<br>
-    throw error;<br>
-  }<br>
-};<br>
+export const RequestMap = async (url) => {
+  try {
+    const response = await axios.get(url);
+    return JSON.stringify(response.data.train_list);
+  } catch (error) 
+    throw error;
+  }
+};
 //
 ## Finally success code  ##############################################################################################
 
