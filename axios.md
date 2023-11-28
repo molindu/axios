@@ -30,7 +30,7 @@ useEffect(() => {
   }, [TRAIN_LIST, TrainDate]);
 
   # api using axios
-```js
+
 //  
 import axios from 'axios';<br>
 
